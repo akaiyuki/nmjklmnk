@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black_87"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Models.Activity.LatestWinnerUserActivity">
+
+        <RelativeLayout
+            android:id="@+id/topLayout_anotheruser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#000000">
+
+            <ImageView
+                android:id="@+id/backImageView_anotheruser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="13dp"
+                android:src="@drawable/back_arrow" />
+
+            <ImageView
+                android:id="@+id/companyLogo_anotheruser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:src="@drawable/actionbar_logo" />
+
+            <ImageView
+                android:id="@+id/profileImageView_anotheruser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:src="@drawable/actionbar_profileicon" />
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/topLayout_anotheruser_next_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/topLayout_anotheruser">
+
+        <ImageView
+            android:id="@+id/paradeprofileImage_anotheruser"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/actionbar_profileicon" />
+
+        <TextView
+            android:id="@+id/paradeprofileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/paradeprofileImage_anotheruser"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffff"
+            android:text="forien" />
+
+        <TextView
+            android:id="@+id/followTextView_anotheruser"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#DF072C"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="+Follow"
+            android:textColor="#FFFFFF" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/date_time_view_anotheruser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textSize="12dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/topLayout_anotheruser_next_layout"
+            android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/imageContentLayout"
+        android:layout_below="@+id/date_time_view_anotheruser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/paradeHeight"
+            android:fitsSystemWindows="true"
+            tools:listitem="@layout/pager_item" />
+
+        <RelativeLayout
+            android:id="@+id/viewPagerIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/viewPagerCountDots"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/badgeImageView"
+            android:layout_width="@dimen/badgeSize"
+            android:layout_height="@dimen/badgeSize"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/badgeMargin"
+            android:padding="5dp" />
+
+
+        <ImageView
+            android:id="@+id/leftArrow"
+            android:layout_width="26dp"
+            android:layout_height="44dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="#80000000"
+            android:padding="5dp"
+            android:src="@drawable/slider_left_icon"
+
+            />
+
+        <ImageView
+            android:id="@+id/rightArrow"
+            android:layout_width="26dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="#80000000"
+            android:padding="5dp"
+            android:src="@drawable/slider_right_icon" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomButtonLayout_anotheruser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageContentLayout"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/horizonralScrollRecyclerView_anotheruser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+            <TextView
+                android:id="@+id/backTextView_anotheruser"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#F2F2F2"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Back"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

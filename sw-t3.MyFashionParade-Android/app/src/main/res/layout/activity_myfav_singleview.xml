@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".Models.Activity.MyFaveSingleViewActivity">
+
+
+    <com.fasionparade.fasionparadeApp.Views.ImageViews.PhotoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView_single_fav"
+        android:src="@drawable/home10"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <TextView
+        android:id="@+id/exitParade_single_fav"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@color/custom_txt_whitegray"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text='CLOSE'
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_marginTop="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp" />
+</RelativeLayout>

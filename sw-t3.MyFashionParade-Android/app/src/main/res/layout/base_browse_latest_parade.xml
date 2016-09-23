@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home10"
+            android:adjustViewBounds="true"
+            />
+
+     <!--   <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/winnerbadge"
+            android:adjustViewBounds="true"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignRight="@id/imageView"
+            />-->
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Models.Activity.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/paradeInfoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parade Info"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/informationIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/information_icon" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/aboutParadeTextView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="TEXt mmmmwdfsf"
+        android:textColor="#FFFFFF" />
+
+
+    <TextView
+        android:id="@+id/exitTextView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="#F2F2F2"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Exit Parade"
+        android:textColor="#514F50" />
+
+    <TextView
+        android:id="@+id/okTextView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/exitTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="#DF072C"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Ok,Got it!"
+        android:textColor="#ffffff" />
+
+
+</RelativeLayout>

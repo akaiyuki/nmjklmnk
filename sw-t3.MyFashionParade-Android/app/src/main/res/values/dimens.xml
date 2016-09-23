@@ -1,0 +1,44 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_drawer_width">260dp</dimen>
+
+    <dimen name="logo_width">150dp</dimen>
+    <!--Fashion -->
+    <!--Login page-->
+    <dimen name="login_top_margin">60dp</dimen>
+
+    <!--Congrats Page-->
+    <dimen name="congratsTopMargin">50dp</dimen>
+
+
+    <!--Home Page-->
+    <dimen name="gridSpacing">1dp</dimen>
+
+
+    <!--My Parade Page-->
+    <dimen name="spacing">1dp</dimen>
+    <dimen name="topMargin">25dp</dimen>
+
+
+    <!--New Parade Page-->
+
+    <dimen name="app_camera_height">100dp</dimen>
+
+    <!--Parade Result Page-->
+
+    <dimen name="paradeResultSpacing">10dp</dimen>
+
+    <!--Inbox Parade Image Page-->
+    <dimen name="paradeImageHeight">550dp</dimen>
+
+    <!--Winner Parade Image Page-->
+    <dimen name="paradeHeight">400dp</dimen>
+
+    <!--Winner Parade Result Image Page-->
+    <dimen name="badgeSize">80dp</dimen>
+    <dimen name="badgeMargin">280dp</dimen>
+
+</resources>
+

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Models.Activity.FindFriendsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000">
+
+        <ImageView
+            android:id="@+id/backImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:src="@drawable/back_arrow" />
+
+        <ImageView
+            android:id="@+id/companyLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:src="@drawable/actionbar_logo" />
+
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:src="@drawable/actionbar_profileicon" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topLayout"
+        android:text="Find Friends"
+        android:textColor="#292929"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/facebookLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:background="#3D60B1"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/fbImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/fb_invite_icon"
+            android:layout_marginLeft="15dp"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Link with Facebook"
+            android:textColor="#FFFFFF"
+            android:layout_toRightOf="@id/fbImageView"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/inviteContactLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/facebookLayout"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#F0F0F0"
+        >
+        <ImageView
+            android:id="@+id/inviteImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/invitecontact_icon"
+            android:layout_marginLeft="15dp"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/inviteContactTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:text="Invite Contacts to MFP"
+            android:layout_toRightOf="@id/inviteImageView"
+            android:textColor="#514F50"
+            android:layout_centerVertical="true"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <TextView
+            android:id="@+id/startParadeTextView"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#DF072C"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="SKIP"
+            android:layout_marginRight="10dp"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/cancelTextView"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="#F2F2F2"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="OK"
+            android:textColor="#514F50" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

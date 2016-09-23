@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bg"
+        tools:context=".Models.Activity.NewParadeActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#000000">
+
+            <ImageView
+                android:id="@+id/backImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="13dp"
+                android:src="@drawable/back_arrow" />
+
+            <ImageView
+                android:id="@+id/companyLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:src="@drawable/actionbar_logo" />
+
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:src="@drawable/actionbar_profileicon" />
+        </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/cameraLayout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/topLayout"
+        android:background="#FFFFFF"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/cameraSubLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="50dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/cameraImage"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:src="@drawable/camera_icon"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Camera"
+                android:layout_below="@+id/cameraImage"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="3dp"
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/cameraSubLayout"
+            android:id="@+id/imageLayout"
+            android:background="#ffececec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="50dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/inboxImage"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:src="@drawable/galary_icon"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Gallery"
+                android:layout_below="@+id/inboxImage"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="3dp"
+                />
+
+
+        </RelativeLayout>
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
+
+            android:layout_marginBottom="20dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="#DF072C"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Back"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/mainLayout"
+        android:layout_below="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/imageRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+
+        <EditText
+            android:id="@+id/tapHereVoterInfoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageRecycler"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="#F2F2F2"
+            android:gravity="center"
+            android:padding="10dp"
+            android:hint="Tap here to give voters info about your Fashion situation\ni.e Where are you going? Who are you meeting?\nAre you in a changeroom and need help? etc"
+            android:textColor="#514F50"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:id="@+id/clockDropDownLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tapHereVoterInfoTextView"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/clockImageView"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/clock_icon" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/clockImageView">
+
+                <TextView
+                    android:id="@+id/setDurationTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="#F2F2F2"
+                    android:padding="15dp"
+                    android:text="SET VOTING DURATION"
+                    android:textColor="#292929" />
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="21dp"
+                    android:layout_alignBottom="@+id/setDurationTextView"
+                    android:layout_alignTop="@+id/setDurationTextView"
+                    android:layout_toRightOf="@+id/setDurationTextView"
+                    android:adjustViewBounds="true"
+                    android:background="#DF072C"
+                    android:padding="10dp"
+                    android:src="@drawable/downarrow_icon" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/shareLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/clockDropDownLayout"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="60"
+                android:background="#000000"
+                android:gravity="center"
+                android:text="Share with"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:background="#000000"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/publicLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#DF072C"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/public_activeicon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Public"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/groupLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/group_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Group"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/contactLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/contact_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Contacts"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/tapHereHashTagTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shareLinearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="#F2F2F2"
+            android:gravity="center"
+            android:padding="10dp"
+            android:hint="Tap here to #tags to your Fashion Parade  "
+            android:textColor="#514F50"
+            android:textSize="12sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tapHereHashTagTextView"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            >
+
+            <TextView
+                android:id="@+id/cancelTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_selection"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Cancel"
+                android:textColor="#514F50" />
+
+            <TextView
+                android:id="@+id/startParadeTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_start_parade"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Start Parade"
+                android:textColor="#FFFFFF" />
+
+
+        </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+

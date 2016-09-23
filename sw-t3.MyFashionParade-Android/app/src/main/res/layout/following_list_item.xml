@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/login_bg"
+    android:layout_height="75dp">
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/imageView_following"
+            android:src="@drawable/actionbar_profileicon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Medium Text"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/textView_username_following" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical|right|center"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/followTextView_statusfollowing"
+                android:layout_width="110dp"
+                android:layout_height="45dp"
+                android:background="#DF072C"
+                android:gravity="center"
+                android:text="+Follow"
+                android:textColor="#FFFFFF"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"/>
+</LinearLayout>

@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Models.Fragments.FeedbackFragment">
+
+    <TextView
+        android:id="@+id/TitleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="User Feedback/Suggestions"
+        android:textColor="#FFFFFF" />
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/emailTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLogoImage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/corner"
+        android:layout_marginTop="20dp"
+        android:focusableInTouchMode="true"
+        app:theme="@style/Theme.App.Base">
+        <!--android:background="@drawable/login_button_bg"-->
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Title"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/useranameTextInputLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/corner"
+        android:id="@+id/view2"
+        app:theme="@style/Theme.App.Base"
+        >
+
+        <EditText
+            android:id="@+id/choosePasswordTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="User Feedback/Suggestions"
+            android:gravity="top|left"
+            android:textColorHint="#ff949494"
+            android:paddingLeft="10dp"
+            android:paddingRight="80dp"
+            android:maxLines="5"
+            android:textColor="#FFFFFF"
+            android:singleLine="true"
+            android:text=""
+            android:inputType="text"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        >
+
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/sendButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:background="#DF072C"
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

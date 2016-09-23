@@ -1,0 +1,311 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Models.Activity.LoginActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_bg"
+        android:fillViewport="false"
+        tools:context=".Models.Activity.NewParadeActivity">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#000000">
+
+                <ImageView
+                    android:id="@+id/backImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="13dp"
+                    android:src="@drawable/back_arrow" />
+
+                <ImageView
+                    android:id="@+id/companyLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="10dp"
+                    android:src="@drawable/actionbar_logo" />
+
+                <ImageView
+                    android:id="@+id/profileImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    android:src="@drawable/actionbar_profileicon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/paradeProfileLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topLayout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/paradeprofileImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/actionbar_profileicon" />
+
+                <TextView
+                    android:id="@+id/paradeprofileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/paradeprofileImage"
+                    android:layout_centerVertical="true"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/followTextView"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/topLayout"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:background="#DF072C"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+Follow"
+                android:textColor="#FFFFFF" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/imageRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paradeProfileLayout"
+                android:layout_marginTop="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/rowOneLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageRecycler"
+                android:padding="5dp">
+
+
+                <LinearLayout
+                    android:id="@+id/rowOneEvenLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+                    <!--<View android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        />-->
+
+                    <ImageView
+                        android:id="@+id/rowOneEvenOne"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true" />
+
+                    <ImageView
+                        android:id="@+id/rowOneEvenTwo"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true" />
+
+                    <!--<View android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rowOneOddLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+
+                    <ImageView
+                        android:id="@+id/rowOneOddOne"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/rowOneOddTwo"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/rowOneOddThree"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+
+                        />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rowTwoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rowOneLayout"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:id="@+id/rowTwoEvenLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:weightSum="3">
+                    <!--<View android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        ></View>-->
+
+                    <ImageView
+                        android:id="@+id/rowTwoEvenOne"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true" />
+
+                    <ImageView
+                        android:id="@+id/rowTwoEvenTwo"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true" />
+
+                    <!--<View android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        ></View>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rowTwoOddLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+
+                    <ImageView
+                        android:id="@+id/rowTwoOddOne"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true" />
+
+                    <ImageView
+                        android:id="@+id/rowTwoOddTwo"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true" />
+
+                    <ImageView
+                        android:id="@+id/rowTwoOddThree"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/clockDropDownLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rowTwoLayout"
+                android:layout_marginTop="100dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/clockImageView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/clock_icon" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/clockImageView">
+
+                    <TextView
+                        android:id="@+id/setDurationTextView_inboxpage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:padding="15dp"
+                        android:text="Time Remaining 04:00"
+                        android:textColor="#DF072C" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/exitparadeTextView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/clockDropDownLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="#F2F2F2"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Exit Parade"
+                android:textColor="#514F50" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

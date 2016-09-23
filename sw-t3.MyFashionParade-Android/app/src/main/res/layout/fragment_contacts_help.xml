@@ -1,0 +1,323 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    tools:context=".Models.Fragments.ParadeHelpFragment">
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contactsicon"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            />
+
+        <TextView
+            android:id="@+id/bottomLogoimageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_below="@+id/logoImageView"
+            android:text="Contacts"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:layout_below="@+id/bottomLogoimageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:id="@+id/txt2"
+            android:text="In the Contacts section"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            />
+        <TextView
+            android:layout_below="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:id="@+id/txt3"
+            android:text="You can add/edit Contacts and create Groups"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@+id/txt3"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+
+
+            >
+
+            <TextView
+                android:id="@+id/signUpButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Skip"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/login_button_bg"
+                />
+
+
+            <TextView
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/login_button_bg"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:gravity="center_horizontal"
+        android:background="#000000"
+        >
+
+        <RelativeLayout
+            android:id="@+id/homeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/homeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/homeicon"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Home"
+                android:layout_below="@+id/homeImage"
+                android:layout_centerHorizontal="true"
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/myParadeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/paradeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/myparadeicon"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:adjustViewBounds="true"
+                android:layout_centerHorizontal="true"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="My Parades"
+                android:layout_below="@+id/paradeImage"
+                android:layout_centerHorizontal="true"
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/inboxLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/inboxImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/invitesicon"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Inbox"
+                android:layout_below="@+id/inboxImage"
+                android:layout_centerHorizontal="true"
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/browseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/browseImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/searchicon"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Browse"
+                android:layout_below="@+id/browseImage"
+                android:layout_centerHorizontal="true"
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="#DF072C"
+            android:id="@+id/contactLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/contactImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/contactsicon"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Contacts"
+                android:layout_below="@+id/contactImage"
+                android:layout_centerHorizontal="true"
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"
+                />
+
+        </RelativeLayout>
+
+        <!-- <RelativeLayout
+             android:id="@+id/chatLayout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:paddingTop="10dp"
+             android:paddingBottom="10dp">
+
+             <ImageView
+                 android:id="@+id/chatImage"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/chaticon"
+                 android:adjustViewBounds="true"
+                 android:layout_marginRight="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_centerHorizontal="true"
+                 />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textColor="#FFFFFF"
+                 android:text="Chats"
+                 android:layout_below="@+id/chatImage"
+                 android:layout_centerHorizontal="true"
+                 android:textSize="10sp"
+                 android:layout_marginTop="5dp"
+                 />
+
+         </RelativeLayout>-->
+
+
+    </LinearLayout>
+</RelativeLayout>

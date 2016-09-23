@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DF072C</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#CCCCCC</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="transparent_black">#B3000000</color>
+
+    <color name="colorHighlighted">#DF072C</color>
+    <color name="colorBackgroundColor">#000000</color>
+
+    <color name="colorBlackText">#000000</color>
+    <color name="colorWhiteText">#FFFFFF</color>
+    <color name="colorGroupText">#565656</color>
+    <color name="colorWhiteBackground">#FFFFFF</color>
+
+    <color name="colorFollowBackground">#1CB80A</color>
+    <color name="colorItemColorBackground">#FF40B710</color>
+
+    <color name="colorLatestParadeBackground">#DF082A</color>
+    <color name="colorLatestWinner">#F0F0F0</color>
+
+    <color name="colorContactText">#282828</color>
+    <color name="colorContactLayout">#F1F2F3</color>
+
+
+    <!-- <color name="colorAccent">#FF80AB</color>-->
+</resources>

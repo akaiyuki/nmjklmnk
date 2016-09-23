@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--Fashion -->
+    <!--Login page-->
+    <dimen name="login_top_margin">140dp</dimen>
+
+    <!--Congrats Page-->
+    <dimen name="congratsTopMargin">200dp</dimen>
+
+    <!--Inbox Parade Image Page-->
+    <dimen name="paradeImageHeight">1100dp</dimen>
+
+    <!--Winner Parade Image Page-->
+    <dimen name="paradeHeight">830dp</dimen>
+
+    <!--Winner Parade Result Image Page-->
+    <dimen name="badgeSize">160dp</dimen>
+    <dimen name="badgeMargin">570dp</dimen>
+    <!--My Parade Page-->
+    <dimen name="topMargin">150dp</dimen>
+
+
+</resources>

@@ -1,0 +1,490 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/login_bg"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bg"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/avloadingIndicatorView"
+                android:background="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                >
+                <com.wang.avi.AVLoadingIndicatorView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+
+                    app:indicator="BallScaleRippleMultiple"
+                    />
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:padding="10dp"
+                    android:text="Loading..."
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </FrameLayout>
+
+
+
+
+            <include
+                android:id="@+id/topLayout"
+                layout="@layout/header_back_toolbar"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/contactLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="#DF072C"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/contactImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/contact_icon" />
+
+                    <TextView
+                        android:id="@+id/contactTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:text="Contacts"
+                        android:layout_centerInParent="true"
+                        android:textColor="#FFFFFF" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/groupLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F1F2F3"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/groupImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/groupicon" />
+
+                    <TextView
+                        android:id="@+id/groupTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:text="Groups"
+                        android:layout_centerInParent="true"
+                        android:textColor="#282828" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/contactContentLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <!--Not used -->
+                    <!-- <LinearLayout
+                         android:id="@+id/inviteLayout"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="#DF072C"
+                         android:gravity="center"
+                         >
+
+                         <ImageView
+                             android:layout_width="45dp"
+                             android:layout_height="45dp"
+                             android:src="@drawable/invitefriendsicon"
+                             android:padding="5dp"
+                             />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Invite Contacts to MFP"
+                             android:textColor="#FFFFFF"
+                             android:textSize="16sp"
+                             android:layout_gravity="center_vertical"
+                             android:layout_marginLeft="20dp"
+                             />
+
+                     </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/categLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/mfpTextView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="#F1F2F3"
+                            android:textColor="#282828"
+                            android:text="MFP"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textSize="16sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/allTextView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="#DF072C"
+                            android:textColor="#FFF"
+                            android:text="ALL"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textSize="16sp"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/fbTextView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="#F1F2F3"
+                            android:textColor="#282828"
+                            android:text="FB"
+                            android:gravity="center"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textSize="16sp"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/invitingLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_alignParentBottom="true"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_start_parade"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="10dp">
+
+                            <ImageView
+                                android:id="@+id/inviteImageView"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/invitefriendsicon"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Add by MFP Username"
+                                android:textColor="#FFF"
+                                android:textSize="18sp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/inviteImageView"
+                                android:layout_marginLeft="10dp"
+                                />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/allLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/categLayout"
+                        android:layout_above="@+id/invitingLayout">
+
+
+                            <com.fasionparade.fasionparadeApp.Views.Listview.ExampleContactListView
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/list" />
+
+
+                        <LinearLayout
+                            android:id="@+id/sideIndex"
+                            android:layout_width="35dip"
+                            android:layout_height="fill_parent"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:background="#c3c3c3"
+                            android:layout_alignParentRight="true"
+                            android:visibility="gone">
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/mfpLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/categLayout"
+                        android:layout_above="@+id/invitingLayout"
+                        android:visibility="gone">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/mfpContactsRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/fbLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/categLayout"
+                        android:layout_above="@+id/invitingLayout"
+                        android:visibility="gone">
+
+                        <com.facebook.login.widget.LoginButton
+                            android:id="@+id/button_fb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Login With Facebook"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_centerInParent="true"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/groupContentLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
+
+                    <!-- <LinearLayout
+                         android:id="@+id/addGroupLayout"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="#DF072C"
+                         android:gravity="center"
+                         android:layout_marginBottom="10dp"
+                         >
+
+                         <ImageView
+                             android:layout_width="45dp"
+                             android:layout_height="45dp"
+                             android:src="@drawable/invitefriendsicon"
+                             android:padding="5dp"
+                             />
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Add Group"
+                             android:textColor="#FFFFFF"
+                             android:textSize="16sp"
+                             android:layout_gravity="center_vertical"
+                             android:layout_marginLeft="20dp"
+                             />
+                     </LinearLayout>
+
+
+                     <android.support.v7.widget.CardView
+                         android:id="@+id/workCardView"
+                         android:layout_width="match_parent"
+                         android:layout_height="40dp"
+                         android:layout_below="@+id/addGroupLayout"
+                         android:layout_margin="10dp"
+                         android:background="#EDEDED"
+                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                         card_view:cardBackgroundColor="#EDEDED"
+                         card_view:cardCornerRadius="0dp"
+
+                         >
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Work Friends"
+                             android:textColor="#282828"
+                             android:layout_gravity="center"
+                             />
+                     </android.support.v7.widget.CardView>
+
+                     <android.support.v7.widget.CardView
+                         android:id="@+id/familyCardView"
+                         android:layout_width="match_parent"
+                         android:layout_height="40dp"
+                         android:layout_below="@+id/workCardView"
+                         android:layout_margin="10dp"
+                         android:background="#EDEDED"
+                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                         card_view:cardBackgroundColor="#EDEDED"
+                         card_view:cardCornerRadius="0dp"
+                         >
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Family"
+                             android:textColor="#282828"
+                             android:layout_gravity="center"
+                             />
+                     </android.support.v7.widget.CardView>
+
+                     <android.support.v7.widget.CardView
+                         android:id="@+id/girlsCardView"
+                         android:layout_width="match_parent"
+                         android:layout_height="40dp"
+                         android:layout_below="@+id/familyCardView"
+                         android:layout_margin="10dp"
+                         android:background="#EDEDED"
+                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                         card_view:cardBackgroundColor="#EDEDED"
+                         card_view:cardCornerRadius="0dp"
+                         >
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="The Girls"
+                             android:textColor="#282828"
+                             android:layout_gravity="center"
+                             />
+                     </android.support.v7.widget.CardView>-->
+
+
+                    <RelativeLayout
+                        android:id="@+id/createGroupLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_alignParentBottom="true"
+
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_start_parade"
+                            android:padding="5dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/createGroupImageView"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/invitefriendsicon"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Create a New Group"
+                                android:textColor="#FFF"
+                                android:textSize="18sp"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/createGroupImageView"
+                                android:layout_marginLeft="10dp"
+                                />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/groupRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/createGroupLayout"
+                        />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

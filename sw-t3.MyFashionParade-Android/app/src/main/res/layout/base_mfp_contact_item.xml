@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:background="#000"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImage_mfpuser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/contactsicon_active"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp" />
+
+    <!--         android:scaleType="center" -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/circleImage"
+        android:layout_centerVertical="true"
+        android:id="@+id/linearLayout3">
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:id="@+id/linearLayout4">
+
+
+
+        <RelativeLayout
+            android:id="@+id/chatLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00BFFF"
+            >
+
+            <ImageView
+                android:id="@+id/chatImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/chaticon_active"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/readmore_arrow"
+                android:text="Chat"
+                android:textColor="#FFFFFF"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:layout_toRightOf="@+id/chatImageView"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/closeImageView_mfpcontatadapter"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/com_facebook_tooltip_blue_xout"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            />
+
+    </LinearLayout>
+
+
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:text="9988776600"
+        android:layout_alignBottom="@+id/linearLayout4"
+        android:layout_toRightOf="@+id/circleImage_mfpuser"
+        android:layout_toEndOf="@+id/circleImage_mfpuser" />
+
+    <TextView
+        android:id="@+id/contactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abinaya"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_above="@+id/phoneNumber"
+        android:layout_alignLeft="@+id/phoneNumber"
+        android:layout_alignStart="@+id/phoneNumber" />
+
+
+</RelativeLayout>

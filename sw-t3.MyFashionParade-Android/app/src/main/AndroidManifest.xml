@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fasionparade.fasionparadeApp">
+
+    <permission
+        android:name="com.fasionparade.fasionparadeApp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.fasionparade.fasionparadeApp.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <used-feature android:name="android.hardware.location" />
+    <used-feature android:name="android.hardware.camera.setParameters" />
+
+    <uses-permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name=".Functions.Core.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Models.Activity.FashionMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.FashionLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Models.Activity.FashionSignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.FashionCongratulations"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.mfp.com/congratulations” -->
+                <data
+                    android:host="www.mfp.com"
+                    android:pathPrefix="/congratulations"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Models.Activity.FashionHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.NewParadeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.gun0912.tedpicker.ImagePickerActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Models.Activity.NotificationCongratulationActivity" />
+        <activity android:name=".Models.Activity.VotingActivity" />
+        <activity android:name=".Models.Activity.LatestWinnerSelectedActivity" />
+        <activity android:name=".Models.Activity.ParadeResultActivity" />
+
+        <service
+            android:name=".Functions.Core.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.fasionparade.fasionparadeApp" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".Models.Activity.GcmMessageHandler"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Functions.Service.RegistrationIntentService"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!--<meta-data-->
+            <!--android:name="com.facebook.sdk.ApplicationId"-->
+            <!--android:value="@string/facebook_app_id" />-->
+
+        <!--Facebook Application for SDK-->
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+
+
+        <activity android:name=".Models.Activity.FindFriendsActivity" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".Models.Activity.MyParadePageActivity"
+            android:label="@string/title_activity_my_parade_page" />
+        <activity
+            android:name=".Models.Activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Models.Activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.ChatDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.ForgotPasswordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.HelpActivity"
+            android:label="@string/title_activity_help" />
+        <activity
+            android:name=".Models.Activity.UpgradeActivity"
+            android:label="@string/title_activity_upgrade" />
+        <activity
+            android:name=".Models.Activity.CameraCaptureActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.VideoCaptureActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.ViewImageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.ViewVideoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.InboxPageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Models.Activity.InboxParadeImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Models.Activity.InformationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Models.Activity.MyParadePage_prof1"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.InboxPageProfileActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.LastWinnersActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.LatestWinnerUserActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.MyFaveSingleViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.MFPUserDetailsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.FollowerListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Models.Activity.PrivacyActivity"
+            android:label="@string/title_activity_privacy" />
+        <activity
+            android:name=".Models.Activity.TermsActivity"
+            android:label="@string/title_activity_terms" />
+        <activity
+            android:name=".Models.Activity.GroupActivity"
+            android:label="@string/title_activity_group" />
+        <activity
+            android:name=".Models.Activity.ContactsActivity"
+            android:label="@string/title_activity_contacts" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="89bc3dbbfe1de6c6da190923ba110735ea54a999" />
+
+        <activity android:name=".Models.Activity.SettingsActivity" />
+        <activity android:name=".Models.Activity.ProfileActivity"></activity>
+    </application>
+
+</manifest>

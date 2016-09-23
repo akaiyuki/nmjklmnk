@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Models.Activity.VotingActivity">
+
+    <LinearLayout
+        android:id="@+id/bottomButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/backTextView"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="#F2F2F2"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Back"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/voteTextView"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#DF072C"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Vote"
+            android:textColor="#FFFFFF" />
+
+
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomButtonLayout"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/imageContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/paradeImageHeight"
+                android:fitsSystemWindows="true"
+                tools:listitem="@layout/pager_item" />
+
+            <RelativeLayout
+                android:id="@+id/viewPagerIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/viewPagerCountDots"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/leftArrow"
+                android:layout_width="26dp"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="#80000000"
+                android:padding="5dp"
+                android:src="@drawable/slider_left_icon"
+
+                />
+
+            <ImageView
+                android:id="@+id/rightArrow"
+                android:layout_width="26dp"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="#80000000"
+                android:padding="5dp"
+                android:src="@drawable/slider_right_icon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="#DD333333">
+
+                <ImageView
+                    android:id="@+id/facebookIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:src="@drawable/facebook_icon" />
+
+                <ImageView
+                    android:id="@+id/instagramIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:src="@drawable/instagram_icon" />
+
+                <ImageView
+                    android:id="@+id/favIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:src="@drawable/fav_icon" />
+
+                <ImageView
+                    android:id="@+id/informationIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:src="@drawable/information_icon" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/closeTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="20dp"
+                android:background="#77999999"
+                android:padding="7dp"
+                android:text="Close"
+                android:textColor="#FFFFFF" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+

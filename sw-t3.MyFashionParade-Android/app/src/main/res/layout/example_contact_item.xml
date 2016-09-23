@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+	android:weightSum="1">
+    
+     <TextView android:id="@+id/sectionTextView" 
+        android:layout_width="fill_parent"
+		 android:layout_marginRight="30dp"
+         android:layout_marginBottom="3dip"
+         android:layout_height="wrap_content"
+		 android:text="A"
+		 android:textStyle="bold"
+		 android:textSize="18sp"
+		 android:paddingLeft="8dip"
+		 android:textColor="#000000"
+		 android:background="#ECEDEE"
+		 android:visibility="gone" />
+     
+     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"
+		 android:background="@color/black_87"
+	     android:id="@+id/infoRowContainer"
+		 android:layout_weight="0.03">
+	
+	    <ImageView
+	        android:id="@+id/userImg_contact"
+	        android:layout_width="40dip"
+	        android:layout_height="40dip"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="5dip"
+	        android:layout_marginTop="5dip"
+	        android:layout_marginRight="5dip"
+	        android:contentDescription="image"
+	        android:focusable="false"
+	        android:scaleType="fitCenter"
+			android:src="@drawable/contact_icon"
+	        android:visibility="visible" />
+	    
+	    <TextView
+	        android:id="@+id/nickNameView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_toRightOf="@id/userImg_contact"
+	        android:textStyle="bold"
+	        android:textSize="14sp"
+			android:textColor="#FFFFFF"
+			android:text="Fullname" />
+	  
+	
+	      <TextView
+	          android:id="@+id/fullNameView"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:textSize="12sp"
+			  android:textColor="#FFFFFF"
+	          android:text="Fullname"
+			  android:layout_below="@+id/nickNameView"
+			  android:layout_alignLeft="@+id/nickNameView"
+			  android:layout_alignStart="@+id/nickNameView" />
+
+
+		 <TextView
+			 android:id="@+id/inviteTextView_new"
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:layout_marginRight="35dp"
+			 android:background="@drawable/login_button_bg"
+			 android:paddingTop="10dp"
+			 android:paddingBottom="10dp"
+			 android:paddingLeft="15dp"
+			 android:paddingRight="15dp"
+			 android:src="@drawable/readmore_arrow"
+			 android:text="Invite"
+			 android:textColor="#FFFFFF"
+			 android:textSize="12sp"
+			 android:layout_alignTop="@+id/userImg_contact"
+			 android:layout_alignParentRight="true"
+			 android:layout_alignParentEnd="true"
+			 android:layout_marginEnd="35dp" />
+		 <ImageView
+			 android:id="@+id/inviteImageView_new"
+			 android:layout_width="30dp"
+			 android:layout_height="30dp"
+			 android:layout_marginRight="45dp"
+			 android:background="@drawable/mfp_logo"
+			 android:layout_alignTop="@+id/userImg_contact"
+			 android:layout_alignParentRight="true"
+			 android:layout_alignParentEnd="true"
+			 android:layout_marginTop="5dp" />
+
+
+		 <View android:layout_width="match_parent"
+             android:layout_height="1dp"
+             android:background="#FFFFFF"
+			 android:id="@+id/view"
+			 android:layout_marginTop="5dp"
+			 android:layout_marginRight="40dp"
+			 android:layout_marginLeft="40dp"
+			 android:layout_marginBottom="2dp"
+			 android:layout_below="@+id/userImg_contact"
+			 android:layout_centerHorizontal="true" />
+	 </RelativeLayout>
+
+
+</LinearLayout>

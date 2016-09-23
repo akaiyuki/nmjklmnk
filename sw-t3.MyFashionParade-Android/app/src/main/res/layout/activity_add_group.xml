@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Models.Fragments.AddGroupFragment">
+
+
+    <include
+        android:id="@+id/topLayout"
+        layout="@layout/header_back_toolbar"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Group Name"
+        android:id="@+id/textView_groupname"
+        android:background="#ECEDEE"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical|center"
+        android:layout_below="@+id/topLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mfpMembersRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/textView_groupname"
+        android:layout_above="@+id/textView_addtogroup">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ADD TO GROUP"
+        android:background="#DF092D"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical|center"
+        android:id="@+id/textView_addtogroup"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView_groupname"
+        android:layout_alignEnd="@+id/textView_groupname"
+        android:layout_alignLeft="@+id/mfpMembersRecyclerView"
+        android:layout_alignStart="@+id/mfpMembersRecyclerView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:text="No member available !!"
+        android:id="@+id/textView_recycleviewempty"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

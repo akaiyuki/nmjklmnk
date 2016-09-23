@@ -1,0 +1,226 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context="com.test.testApp.FashionSignUpActivity"
+    android:fillViewport="false"
+    android:background="@drawable/login_bg"
+    >
+    <!-- android:background="@drawable/login_bg"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <ImageView
+            android:id="@+id/topLogoImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/main_logo"
+
+            ></ImageView>
+
+
+        <RelativeLayout
+            android:id="@+id/facebookLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:alpha=".2"
+                >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:layout_centerHorizontal="true"
+                >
+                <ImageView
+                    android:id="@+id/fbLogoImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fb_icon"
+                    android:padding="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign up with Facebook"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/fbLogoImageView"
+                    />
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/emailTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:theme="@style/Theme.App.Base"
+            android:focusableInTouchMode="true"
+            >
+            <!--android:background="@drawable/login_button_bg"-->
+            <EditText
+                android:id="@+id/emailTxt"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Email"
+                android:textColorHint="#FFFFFF"
+                android:paddingLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                android:layout_marginRight="20dp"
+                app:theme="@style/Theme.App.Base"
+                android:focusableInTouchMode="true"
+                >
+                <!--android:background="@drawable/login_button_bg"-->
+                <EditText
+                    android:id="@+id/codeTxt"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:hint="Code"
+                    android:textColorHint="#FFFFFF"
+                    android:paddingLeft="10dp"
+                    android:textColor="#FFFFFF"
+                    android:singleLine="true"
+                    android:editable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:theme="@style/Theme.App.Base"
+                android:focusableInTouchMode="true"
+                >
+                <!--android:background="@drawable/login_button_bg"-->
+                <EditText
+                    android:id="@+id/phoneTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Phone Number"
+                    android:textColorHint="#FFFFFF"
+                    android:paddingLeft="10dp"
+                    android:textColor="#FFFFFF"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your phone number is used to help find friends &amp; is not visible to the public"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_above="@id/bottomTextView"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            >
+
+            <TextView
+                android:id="@+id/backButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textColor="#000000"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <TextView
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:background="#DF072C"
+                android:layout_marginLeft="10dp"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
